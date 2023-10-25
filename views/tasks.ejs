@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/nav.css">
+<%- include("partials/header.ejs") %>
+<%- include("partials/nav.ejs") %>
+    
+   <div class="card-details">
+    <% task.forEach(function(e,index) {%>
+        
+      <div class="show-card">
+        <h2>Show Task</h2ahi>
+        
+        <h2><span>Title</span>: <%= e.title%></h2>
+     
+        <h2><span>Description</span>: <%= e.description%></h2>
+        <h3><span>Date</span>: <%=e.date%></h3>
+        
+        <p>
+            <button><a href="/delete/<%= index%>">Delete</a></button>
+            <button><a href="/update/<%= index%>">Update</a></button>
+        </p>
+      </div>
+      <% }) %>
+    </div>
+   <%- include("partials/footer.ejs") %>
